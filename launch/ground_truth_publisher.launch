@@ -1,0 +1,7 @@
+<launch>
+        <param name ="/use_sim_time" value="true"/>
+	<node pkg="kitti_utilities" type="ground_truth_publisher.py" name="ground_truth_publisherr"  output="screen" />
+        <node pkg="kitti_utilities" type="path_publisher" name="path_publisher" output="screen"/>
+        <node type="rviz" name="rviz" pkg="rviz"  args="../rviz/kitti_utilities.rviz" />-
+</launch>
+
