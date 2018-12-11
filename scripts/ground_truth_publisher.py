@@ -27,7 +27,7 @@ if __name__ == '__main__':
             (trans,rot) = listener.lookupTransform('/world', '/base_link', rospy.Time(0))
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
             continue
-
+        print([trans, rot])
         pose.header.stamp = time
         pose.header.frame_id = "world"
         pose.pose.position.x = trans[0]
